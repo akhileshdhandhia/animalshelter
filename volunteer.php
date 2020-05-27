@@ -6,6 +6,36 @@ if (isset($_SESSION["email"])) {
 	$mainEmail = false;
 }
 ?>
+<?php
+if (isset($_POST["submit"])) {
+	$firstName = $_POST["firstName"];
+	$lastName = $_POST["lastName"];
+	$address = $_POST["address"];
+	$city = $_POST["city"];
+	$state = $_POST["state"];
+	$country = $_POST["country"];
+	$postalcode = $_POST["postalcode"];
+	$email = $_POST["email"];
+	$phone = $_POST["phone"];
+	$note = $_POST["note"];
+	$daya = 0;
+	if(isset($_POST["daya"])) $daya=1;
+	$dayb = 0;
+	if(isset($_POST["dayb"])) $dayb=1;
+	$dayc = 0;
+	if(isset($_POST["dayc"])) $dayc=1;
+	$dayd = 0;
+	if(isset($_POST["dayd"])) $dayd=1;
+	$daye = 0;
+	if(isset($_POST["daye"])) $daye=1;
+	$dayf = 0;
+	if(isset($_POST["dayf"])) $dayf=1;
+	$dayg = 0;
+	if(isset($_POST["dayg"])) $dayg=1;
+	echo $firstName . $lastName . $address . $city . $state . $country . $postalcode . $email . $note . $daya . $dayb . $dayc . $dayd . $daye . $dayf . $dayg;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -71,26 +101,26 @@ if (isset($_SESSION["email"])) {
 				</div>
 			</div>
 			<div class="row justify-content-center">
-				<form class="col-lg-9">
+				<form class="col-lg-9" method="POST">
 					<div class="form-group">
 						<label for="first-name">First Name</label>
-						<input type="text" class="form-control" placeholder="First Name">
+						<input type="text" class="form-control" placeholder="First Name" name="firstName" required>
 					</div>
 					<div class="form-group">
 						<label for="last-name">Last Name</label>
-						<input type="text" class="form-control" placeholder="Last Name">
+						<input type="text" class="form-control" placeholder="Last Name" name="lastName" required>
 					</div>
 					<div class="form-group">
 						<label for="Address">Address</label>
-						<input type="text" class="form-control mb-20" placeholder="Your Address">
-						<input type="text" class="form-control" placeholder="">
+						<input type="text" class="form-control mb-20" placeholder="Your Address" name="address" required>
 					</div>
+
 					<div class="form-row">
 						<div class="col-6 mb-30">
 							<label for="City">City</label>
 							<div class="select-option" id="service-select"">
-									<select>
-										<option data-display=" Select City">Select City</option>
+									<select name=" city">
+								<option data-display=" Select City">Select City</option>
 								<option value="1">Dhaka</option>
 								<option value="2">Dinajpur</option>
 								<option value="3">Gazipur</option>
@@ -101,22 +131,22 @@ if (isset($_SESSION["email"])) {
 						</div>
 						<div class="col-6 mb-30">
 							<label for="state">State</label>
-							<div class="select-option" id="service-select"">
-									<select>
-										<option data-display=" Select State">Select State</option>
-								<option value="1">State One</option>
-								<option value="2">State Two</option>
-								<option value="3">State Three</option>
-								<option value="4">State Four</option>
-								<option value="5">State Five</option>
+							<div class="select-option" id="service-select">
+								<select name=" state">
+									<option data-display=" Select State">Select State</option>
+									<option value="1">State One</option>
+									<option value="2">State Two</option>
+									<option value="3">State Three</option>
+									<option value="4">State Four</option>
+									<option value="5">State Five</option>
 								</select>
 							</div>
 						</div>
 						<div class="col-6 mb-30">
 							<label for="Country">Country</label>
 							<div class="select-option" id="service-select"">
-									<select>
-										<option data-display=" Select Country">Select Country</option>
+									<select name=" country">
+								<option data-display=" Select Country">Select Country</option>
 								<option value="1">Bangladesh</option>
 								<option value="2">London</option>
 								<option value="3">India</option>
@@ -127,15 +157,15 @@ if (isset($_SESSION["email"])) {
 						</div>
 						<div class="col-6 mb-30">
 							<label for="postal-code">Postal code</label>
-							<input type="text" class="form-control" placeholder="Postal Code">
+							<input type="text" class="form-control" placeholder="Postal Code" name="postalcode" required>
 						</div>
 						<div class="col-6 mb-30">
 							<label for="email">Email Address</label>
-							<input type="email" class="form-control" placeholder="Email Address">
+							<input type="email" class="form-control" placeholder="Email Address" name="email" required>
 						</div>
 						<div class="col-6 mb-30">
 							<label for="phone">Phone Number</label>
-							<input type="phone" class="form-control" placeholder="Phone Number">
+							<input type="phone" class="form-control" placeholder="Phone Number" name="phone" required>
 						</div>
 					</div>
 
@@ -144,46 +174,46 @@ if (isset($_SESSION["email"])) {
 						<div class="form-group ">
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio1" value="option1"> Monday
+									<input class="form-check-input" type="checkbox" name="daya" id="inlineRadio1" value="option1"> Monday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio2" value="option2"> Tuesday
+									<input class="form-check-input" type="checkbox" name="dayb" id="inlineRadio2" value="option2"> Tuesday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio3" value="option3"> Wednesday
+									<input class="form-check-input" type="checkbox" name="dayc" id="inlineRadio3" value="option3"> Wednesday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio2" value="option4"> Thursday
+									<input class="form-check-input" type="checkbox" name="dayd" id="inlineRadio2" value="option4"> Thursday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio2" value="option5"> Friday
+									<input class="form-check-input" type="checkbox" name="daye" id="inlineRadio2" value="option5"> Friday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio2" value="option6"> Saturday
+									<input class="form-check-input" type="checkbox" name="dayf" id="inlineRadio2" value="option6"> Saturday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio2" value="option6"> Sunday
+									<input class="form-check-input" type="checkbox" name="dayg" id="inlineRadio2" value="option6"> Sunday
 								</label>
 							</div>
 						</div>
 					</fieldset>
 					<div class="form-group">
 						<label for="note">Volunteer Note</label>
-						<textarea class="form-control" id="exampleTextarea" rows="5" placeholder="Write message"></textarea>
+						<textarea class="form-control" id="exampleTextarea" rows="5" placeholder="Write message" name="note"></textarea>
 					</div>
-					<button type="submit" class="primary-btn float-right">Send Request</button>
+					<button type="submit" class="primary-btn float-right" name="submit">Send Request</button>
 				</form>
 			</div>
 		</div>
