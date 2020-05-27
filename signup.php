@@ -124,7 +124,7 @@ if (isset($_POST["submitLogin"])) {
                         <li class="menu-active">
                             <a href="index.php">Home</a>
                         </li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.php">About Us</a></li>
                         <li><a href="cats.html">Cats</a></li>
                         <li><a href="dogs.html">Dogs</a></li>
                         <li><a href="volunteer.html">Volunteer</a></li>
@@ -139,7 +139,7 @@ if (isset($_POST["submitLogin"])) {
                                 </li>
                             </ul>
                         </li> -->
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                         <li><a href="signup.php">Sign Up/Login</a></li>
                     </ul>
                 </nav>
@@ -161,7 +161,7 @@ if (isset($_POST["submitLogin"])) {
                     <p class="text-white link-nav">
                         <a href="index.php">Home </a>
                         <span class="lnr lnr-arrow-right"></span>
-                        <a href="contact.html"> Sign Up</a>
+                        <a href="contact.php"> Sign Up</a>
                     </p>
                 </div>
             </div>
@@ -260,7 +260,7 @@ if (isset($_POST["submitLogin"])) {
                             <ul class="col footer-nav">
                                 <li><a href="index.php">Home</a></li>
                                 <li><a href="adopt.php">Adopt</a></li>
-                                <li><a href="about.html">About</a></li>
+                                <li><a href="about.php">About</a></li>
                             </ul>
                             <ul class="col footer-nav">
                                 <li>

@@ -56,7 +56,7 @@ if (isset($_SESSION["email"])) {
 						Adopting a pet has many benefits, some of which you may have not considered.
 						By adopting from a shelter, you are providing an animal with the second chance they deserve.
 					</p>
-					<a href="about.html" class="primary-btn header-btn text-uppercase">Find a pet to adopt</a>
+					<a href="about.php" class="primary-btn header-btn text-uppercase">Find a pet to adopt</a>
 				</div>
 			</div>
 		</div>
@@ -169,7 +169,7 @@ if (isset($_SESSION["email"])) {
 				<div class="col-lg-3 col-md-6">
 					<div class="single-process">
 						<span class="lnr lnr-user"></span>
-						<a href="contact.html" target="_blank">
+						<a href="contact.php" target="_blank">
 							<h4>
 								Meeting Authority
 							</h4>
@@ -297,7 +297,7 @@ if (isset($_SESSION["email"])) {
 							<ul class="col footer-nav">
 								<li><a href="index.php">Home</a></li>
 								<li><a href="adopt.php">Adopt</a></li>
-								<li><a href="about.html">About</a></li>
+								<li><a href="about.php">About</a></li>
 							</ul>
 							<ul class="col footer-nav">
 								<li><a href="volunteer.html">Volunteer</a></li>

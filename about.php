@@ -60,7 +60,7 @@ if (isset($_SESSION["email"])) {
                         <p class="text-white link-nav">
                             <a href="index.php">Home </a>
                             <span class="lnr lnr-arrow-right"></span>
-                            <a href="about.html"> About Us</a>
+                            <a href="about.php"> About Us</a>
                         </p>
                     </div>
                 </div>
@@ -324,7 +324,7 @@ if (isset($_SESSION["email"])) {
                                 <ul class="col footer-nav">
                                     <li><a href="index.php">Home</a></li>
                                     <li><a href="adopt.php">Adopt</a></li>
-                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="about.php">About</a></li>
                                 </ul>
                                 <ul class="col footer-nav">
                                     <li>

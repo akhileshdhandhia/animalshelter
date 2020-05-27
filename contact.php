@@ -1,11 +1,23 @@
 <?php
 session_start();
 if (isset($_SESSION["email"])) {
-    $mainEmail = $_SESSION["email"];
+	$mainEmail = $_SESSION["email"];
 } else {
-    $mainEmail = false;
+	$mainEmail = false;
 }
 ?>
+<?php
+if (isset($_POST["submit"])) {
+	$name = $_POST["name"];
+    $email = $_POST["email"];
+    $subject = $_POST["subject"];
+    $message = $_POST["message"];
+	
+	echo $name . $email . $subject . $message;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -54,7 +66,7 @@ if (isset($_SESSION["email"])) {
                     <p class="text-white link-nav">
                         <a href="index.php">Home </a>
                         <span class="lnr lnr-arrow-right"></span>
-                        <a href="contact.html"> Contact Us</a>
+                        <a href="contact.php"> Contact Us</a>
                     </p>
                 </div>
             </div>
@@ -96,7 +108,7 @@ if (isset($_SESSION["email"])) {
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <form class="form-area" id="myForm" action="mail.php" method="post" class="contact-form text-right">
+                    <form class="form-area" id="myForm" method="post" class="contact-form text-right">
                         <div class="row">
                             <div class="col-lg-6 form-group">
                                 <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text" />
@@ -110,7 +122,7 @@ if (isset($_SESSION["email"])) {
                             </div>
                             <div class="col-lg-12 d-flex justify-content-between">
                                 <div class="alert-msg" style="text-align: left;"></div>
-                                <button class="genric-btn primary circle" style="float: right;">
+                                <button class="genric-btn primary circle" style="float: right;" name="submit">
                                     Send Message
                                 </button>
                             </div>
@@ -149,7 +161,7 @@ if (isset($_SESSION["email"])) {
                             <ul class="col footer-nav">
                                 <li><a href="index.php">Home</a></li>
                                 <li><a href="adopt.php">Adopt</a></li>
-                                <li><a href="about.html">About</a></li>
+                                <li><a href="about.php">About</a></li>
                             </ul>
                             <ul class="col footer-nav">
                                 <li>
@@ -232,7 +244,7 @@ if (isset($_SESSION["email"])) {
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/mail-script.js"></script>
+    <!-- <script src="js/mail-script.js"></script> -->
     <script src="js/main.js"></script>
 </body>
 

@@ -240,7 +240,7 @@ if (isset($_POST["submit"])) {
 							<ul class="col footer-nav">
 								<li><a href="index.php">Home</a></li>
 								<li><a href="adopt.php">Adopt</a></li>
-								<li><a href="about.html">About</a></li>
+								<li><a href="about.php">About</a></li>
 							</ul>
 							<ul class="col footer-nav">
 								<li><a href="volunteer.html">Volunteer</a></li>
