@@ -174,7 +174,7 @@ if (isset($_SESSION["email"])) {
 							</ul>
 							<ul class="col footer-nav">
 								<li><a href="volunteer.html">Volunteer</a></li>
-								<li><a href="blog-home.html">Blog</a></li>
+								<!-- <li><a href="blog-home.html">Blog</a></li> -->
 							</ul>
 						</div>
 					</div>

@@ -266,7 +266,7 @@ if (isset($_POST["submitLogin"])) {
                                 <li>
                                     <a href="volunteer.html">Volunteer</a>
                                 </li>
-                                <li><a href="blog-home.html">Blog</a></li>
+                                <!-- <li><a href="blog-home.html">Blog</a></li> -->
                             </ul>
                         </div>
                     </div>

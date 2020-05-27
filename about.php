@@ -330,7 +330,7 @@ if (isset($_SESSION["email"])) {
                                     <li>
                                         <a href="volunteer.html">Volunteer</a>
                                     </li>
-                                    <li><a href="blog-home.html">Blog</a></li>
+                                    <!-- <li><a href="blog-home.html">Blog</a></li> -->
                                 </ul>
                             </div>
                         </div>
