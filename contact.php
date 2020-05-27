@@ -5,17 +5,28 @@ if (isset($_SESSION["email"])) {
 } else {
 	$mainEmail = false;
 }
+include_once "./config/db.php";
 ?>
 <?php
+function showAlert($message){
+    ?>
+    <script>
+    var message='<?php echo $message ;?>';
+    alert(message);
+    </script>
+    <?php
+}
 if (isset($_POST["submit"])) {
 	$name = $_POST["name"];
     $email = $_POST["email"];
     $subject = $_POST["subject"];
     $message = $_POST["message"];
 	
-	echo $name . $email . $subject . $message;
+    $addContact = $conn->query("INSERT INTO `contact` VALUES (NULL, '$name','$email','$subject','$message');");
+		if ($addContact) {
+            showAlert("Thank you for contacting us :*");
+        } else {showAlert("Request not submitted");}
 }
-
 ?>
 
 <!DOCTYPE html>

@@ -5,8 +5,18 @@ if (isset($_SESSION["email"])) {
 } else {
 	$mainEmail = false;
 }
+include_once "./config/db.php";
 ?>
 <?php
+function showAlert($message)
+{
+?>
+	<script>
+		var message = '<?php echo $message; ?>';
+		alert(message);
+	</script>
+<?php
+}
 if (isset($_POST["submit"])) {
 	$firstName = $_POST["firstName"];
 	$lastName = $_POST["lastName"];
@@ -19,20 +29,28 @@ if (isset($_POST["submit"])) {
 	$phone = $_POST["phone"];
 	$note = $_POST["note"];
 	$daya = 0;
-	if(isset($_POST["daya"])) $daya=1;
+	if (isset($_POST["daya"])) $daya = 1;
 	$dayb = 0;
-	if(isset($_POST["dayb"])) $dayb=1;
+	if (isset($_POST["dayb"])) $dayb = 1;
 	$dayc = 0;
-	if(isset($_POST["dayc"])) $dayc=1;
+	if (isset($_POST["dayc"])) $dayc = 1;
 	$dayd = 0;
-	if(isset($_POST["dayd"])) $dayd=1;
+	if (isset($_POST["dayd"])) $dayd = 1;
 	$daye = 0;
-	if(isset($_POST["daye"])) $daye=1;
+	if (isset($_POST["daye"])) $daye = 1;
 	$dayf = 0;
-	if(isset($_POST["dayf"])) $dayf=1;
+	if (isset($_POST["dayf"])) $dayf = 1;
 	$dayg = 0;
-	if(isset($_POST["dayg"])) $dayg=1;
-	echo $firstName . $lastName . $address . $city . $state . $country . $postalcode . $email . $note . $daya . $dayb . $dayc . $dayd . $daye . $dayf . $dayg;
+	if (isset($_POST["dayg"])) $dayg = 1;
+
+	$week = array($daya, $dayb, $dayc, $dayd, $daye, $dayf, $dayg);
+	$week = json_encode($week);
+	$addContact = $conn->query("INSERT INTO `volunteer` VALUES (NULL, '$firstName','$lastName','$address','$city','$state','$country',$postalcode,'$email',$phone,'$note','$week');");
+	if ($addContact) {
+		showAlert("Thank you for registering. We will contact you for further events.");
+	} else {
+		showAlert("Request not submitted");
+	}
 }
 
 ?>
@@ -174,37 +192,37 @@ if (isset($_POST["submit"])) {
 						<div class="form-group ">
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="daya" id="inlineRadio1" value="option1"> Monday
+									<input class="form-check-input" type="checkbox" name="daya" id="inlineRadio1" value="Monday"> Monday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="dayb" id="inlineRadio2" value="option2"> Tuesday
+									<input class="form-check-input" type="checkbox" name="dayb" id="inlineRadio2" value="Tuesday"> Tuesday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="dayc" id="inlineRadio3" value="option3"> Wednesday
+									<input class="form-check-input" type="checkbox" name="dayc" id="inlineRadio3" value="Wednesday"> Wednesday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="dayd" id="inlineRadio2" value="option4"> Thursday
+									<input class="form-check-input" type="checkbox" name="dayd" id="inlineRadio2" value="Thursday"> Thursday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="daye" id="inlineRadio2" value="option5"> Friday
+									<input class="form-check-input" type="checkbox" name="daye" id="inlineRadio2" value="Friday"> Friday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="dayf" id="inlineRadio2" value="option6"> Saturday
+									<input class="form-check-input" type="checkbox" name="dayf" id="inlineRadio2" value="Saturday"> Saturday
 								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="dayg" id="inlineRadio2" value="option6"> Sunday
+									<input class="form-check-input" type="checkbox" name="dayg" id="inlineRadio2" value="Sunday"> Sunday
 								</label>
 							</div>
 						</div>
