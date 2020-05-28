@@ -176,7 +176,7 @@ if (isset($_POST["submit"])) {
                             </ul>
                             <ul class="col footer-nav">
                                 <li>
-                                    <a href="volunteer.html">Volunteer</a>
+                                    <a href="volunteer.php">Volunteer</a>
                                 </li>
                                 <!-- <li><a href="blog-home.html">Blog</a></li> -->
                             </ul>

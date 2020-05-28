@@ -99,7 +99,7 @@ if (isset($_POST["submit"])) {
 					<h1 class="text-white">
 						Become a Volunteer
 					</h1>
-					<p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="volunteer.html"> Become a Volunteer</a></p>
+					<p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="volunteer.php"> Become a Volunteer</a></p>
 				</div>
 			</div>
 		</div>
@@ -261,7 +261,7 @@ if (isset($_POST["submit"])) {
 								<li><a href="about.php">About</a></li>
 							</ul>
 							<ul class="col footer-nav">
-								<li><a href="volunteer.html">Volunteer</a></li>
+								<li><a href="volunteer.php">Volunteer</a></li>
 								<!--  <li><a href="blog-home.html">Blog</a></> -->
 							</ul>
 						</div>

@@ -51,7 +51,7 @@ if (isset($_SESSION["email"])) {
 					<h1 class="text-white">
 						Cats
 					</h1>
-					<p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="cats.html"> Cats</a></p>
+					<p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="cats.php"> Cats</a></p>
 				</div>
 			</div>
 		</div>
@@ -143,7 +143,7 @@ if (isset($_SESSION["email"])) {
 					Caring for pets can help you deal with depression, anxiety, and stress.
 				</p>
 				<div class="buttons d-flex flex-row">
-					<a href="volunteer.html" class="primary-btn text-uppercase">Register now</a>
+					<a href="volunteer.php" class="primary-btn text-uppercase">Register now</a>
 				</div>
 			</div>
 		</div>
@@ -173,7 +173,7 @@ if (isset($_SESSION["email"])) {
 								<li><a href="about.php">About</a></li>
 							</ul>
 							<ul class="col footer-nav">
-								<li><a href="volunteer.html">Volunteer</a></li>
+								<li><a href="volunteer.php">Volunteer</a></li>
 								<!-- <li><a href="blog-home.html">Blog</a></li> -->
 							</ul>
 						</div>

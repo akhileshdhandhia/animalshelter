@@ -125,9 +125,9 @@ if (isset($_POST["submitLogin"])) {
                             <a href="index.php">Home</a>
                         </li>
                         <li><a href="about.php">About Us</a></li>
-                        <li><a href="cats.html">Cats</a></li>
-                        <li><a href="dogs.html">Dogs</a></li>
-                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="cats.php">Cats</a></li>
+                        <li><a href="dogs.php">Dogs</a></li>
+                        <li><a href="volunteer.php">Volunteer</a></li>
                         <!-- <li class="menu-has-children">
                             <a href="">Blog</a>
                             <ul>
@@ -264,7 +264,7 @@ if (isset($_POST["submitLogin"])) {
                             </ul>
                             <ul class="col footer-nav">
                                 <li>
-                                    <a href="volunteer.html">Volunteer</a>
+                                    <a href="volunteer.php">Volunteer</a>
                                 </li>
                                 <!-- <li><a href="blog-home.html">Blog</a></li> -->
                             </ul>

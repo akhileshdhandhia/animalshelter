@@ -274,7 +274,7 @@ if (isset($_SESSION["email"])) {
 				</p>
 
 				<div class="buttons d-flex flex-row">
-					<a href="volunteer.html" class="primary-btn text-uppercase">Register now</a>
+					<a href="volunteer.php" class="primary-btn text-uppercase">Register now</a>
 				</div>
 			</div>
 		</div>
@@ -303,7 +303,7 @@ if (isset($_SESSION["email"])) {
 								<li><a href="about.php">About</a></li>
 							</ul>
 							<ul class="col footer-nav">
-								<li><a href="volunteer.html">Volunteer</a></li>
+								<li><a href="volunteer.php">Volunteer</a></li>
 								<!-- <li><a href="blog-home.html">Blog</a></li> -->
 							</ul>
 						</div>
