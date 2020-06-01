@@ -139,11 +139,11 @@ if (isset($_POST["submit"])) {
 							<div class="select-option" id="service-select"">
 									<select name=" city">
 								<option data-display=" Select City">Select City</option>
-								<option value="1">Dhaka</option>
-								<option value="2">Dinajpur</option>
-								<option value="3">Gazipur</option>
-								<option value="4">Bogra</option>
-								<option value="5">Feni</option>
+								<option value="Kolkata">Kolkata</option>
+								<option value="Bangalore">Bangalore</option>
+								<option value="Chennai">Chennai</option>
+								<option value="Mumbai">Mumbai</option>
+								<option value="Delhi">Delhi</option>
 								</select>
 							</div>
 						</div>
@@ -152,11 +152,10 @@ if (isset($_POST["submit"])) {
 							<div class="select-option" id="service-select">
 								<select name=" state">
 									<option data-display=" Select State">Select State</option>
-									<option value="1">State One</option>
-									<option value="2">State Two</option>
-									<option value="3">State Three</option>
-									<option value="4">State Four</option>
-									<option value="5">State Five</option>
+									<option value="West Bengal">West Bengal</option>
+									<option value="Karnataka">Karnataka</option>
+									<option value="Tamil Nadu">Tamil Nadu</option>
+									<option value="Maharashtra">Maharashtra</option>
 								</select>
 							</div>
 						</div>
@@ -165,11 +164,11 @@ if (isset($_POST["submit"])) {
 							<div class="select-option" id="service-select"">
 									<select name=" country">
 								<option data-display=" Select Country">Select Country</option>
-								<option value="1">Bangladesh</option>
-								<option value="2">London</option>
-								<option value="3">India</option>
-								<option value="4">Nepal</option>
-								<option value="5">Uganda</option>
+								<option value="Bangladesh">Bangladesh</option>
+								<option value="London">London</option>
+								<option value="India">India</option>
+								<option value="Nepal">Nepal</option>
+								<option value="Uganda">Uganda</option>
 								</select>
 							</div>
 						</div>

@@ -192,7 +192,7 @@ if (isset($_POST["Submit"])) {
 								<option value="Bangalore">Bangalore</option>
 								<option value="Chennai">Chennai</option>
 								<option value="Mumbai">Mumbai</option>
-								<option value="Mumbai">Delhi</option>
+								<option value="Delhi">Delhi</option>
 								</select>
 							</div>
 						</div>
